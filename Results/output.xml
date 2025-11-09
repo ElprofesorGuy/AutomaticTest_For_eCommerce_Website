@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-11-09T13:02:06.766183" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\user\PycharmProjects\ApplicationTest\tests">
+<suite id="s1-s1" name="Main" source="C:\Users\user\PycharmProjects\ApplicationTest\tests\main.robot">
+<kw name="Begin Web Test" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-09T13:02:07.225788" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2025-11-09T13:02:24.369451" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-11-09T13:02:24.370064" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-11-09T13:02:07.225452" elapsed="17.167054">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2025-11-09T13:02:24.393213" elapsed="0.000155"/>
+</kw>
+<status status="FAIL" start="2025-11-09T13:02:07.224481" elapsed="17.169279">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<test id="s1-s1-t1" name="Acces website" line="12">
+<status status="FAIL" start="2025-11-09T13:02:24.394076" elapsed="0.001113">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s1-t2" name="Not Found Research" line="17">
+<status status="FAIL" start="2025-11-09T13:02:24.396499" elapsed="0.001073">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s1-t3" name="Found Research" line="20">
+<status status="FAIL" start="2025-11-09T13:02:24.399356" elapsed="0.000776">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s1-t4" name="Choose Your Product" line="23">
+<status status="FAIL" start="2025-11-09T13:02:24.401054" elapsed="0.000841">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s1-t5" name="Add Another Product" line="29">
+<status status="FAIL" start="2025-11-09T13:02:24.402908" elapsed="0.000567">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s1-t6" name="Valid Registration" line="33">
+<status status="FAIL" start="2025-11-09T13:02:24.404206" elapsed="0.000530">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s1-t7" name="Invalid Registration" line="36">
+<status status="FAIL" start="2025-11-09T13:02:24.405440" elapsed="0.000630">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-s1-t8" name="Login" line="41">
+<status status="FAIL" start="2025-11-09T13:02:24.406957" elapsed="0.001860">Parent suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<kw name="End Web Test" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-09T13:02:24.411320" elapsed="0.000340"/>
+</kw>
+<status status="PASS" start="2025-11-09T13:02:24.410730" elapsed="0.001163"/>
+</kw>
+<status status="FAIL" start="2025-11-09T13:02:06.815881" elapsed="17.596139">Suite setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</suite>
+<status status="FAIL" start="2025-11-09T13:02:06.770626" elapsed="17.643418"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="0" fail="8" skip="0">Tests</stat>
+<stat name="Main" id="s1-s1" pass="0" fail="8" skip="0">Tests.Main</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

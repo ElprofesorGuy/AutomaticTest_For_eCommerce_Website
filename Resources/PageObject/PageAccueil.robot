@@ -26,7 +26,8 @@ Search Product
     Wait Until Page Contains  Panier  20s
 
 Bad Search Product
+    [Arguments]    ${BAD_NAME_PRODUCTS}
     Click Element  ${INPUT_SEARCH}
-    Input Text  ${INPUT_SEARCH}  bateaux
+    Input Text  ${INPUT_SEARCH}  ${BAD_NAME_PRODUCTS}
     Press Keys  ${INPUT_SEARCH}  ENTER
     Wait Until Page Contains  Aucun Resultat trouvé

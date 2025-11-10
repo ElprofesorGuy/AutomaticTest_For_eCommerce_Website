@@ -34,8 +34,9 @@ Create Account With Invalid Email
     Input Password    //*[@id="registerModel_Password"]    hujsen123
     Input Password    //*[@id="registerModel_ConfirmPassword"]    hujsen123
     Click Button    //*[@id="register-form"]/form/div[4]/button
-    Scroll Element Into VIew  //*[@id="register-form"]/form/div[4]/div[3]/span
-    Wait Until Element Is Visible    //*[@id="register-form"]/form/div[4]/div[3]/span   10s
+    Wait Until Page Contains  Adresse email invalide
+    #Scroll Element Into VIew  //*[@id="register-form"]/form/div[4]/div[3]/span
+    #Wait Until Element Is Visible    //*[@id="register-form"]/form/div[4]/div[3]/span   10s
     #Element Should Contain    css:.error-message    email
 
 Create Account with Not Strong Password

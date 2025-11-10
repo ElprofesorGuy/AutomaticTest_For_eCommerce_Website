@@ -3,7 +3,7 @@ ${BROWSER} =  chrome
 ${GOOGLE_URL} =  https://www.google.com
 ${EMAIL} =  guyeinstein15@gmail.com
 ${PASSWORD} =  Guyzomaru
-${INVALID_EMAIL} =  invalidEmail
+${INVALID_EMAIL} =  invalid@Email
 ${SEARCH_KEYWPRD} =  ordinateur
 ${NEW_PASSWORD} =  AllezLion5
 

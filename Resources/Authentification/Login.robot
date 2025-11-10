@@ -5,6 +5,7 @@ Resource  ../variables.robot
 *** Keywords ***
 Valid Log in
     Click Element    id=auth-connect-id
+    Scroll Element Into View  //*[@id="login-id"]
     Click Button  id=login-id
     Wait Until Page Contains  Se connecter    10s
     Input Text    //*[@id="loginModel_Email"]    zinzin52@gmail.com
@@ -15,6 +16,7 @@ Valid Log in
 
 Invalid Password Log In
     Click Element    id=auth-connect-id
+    Scroll Element Into View  //*[@id="login-id"]
     Click Button  id=login-id
     Wait Until Page Contains  Se connecter    10s
     Input Text    id:email    zinzin52@gmail.com

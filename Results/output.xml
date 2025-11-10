@@ -1,78 +1,428 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-11-09T13:02:06.766183" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.14.0 on win32)" generated="2025-11-09T22:54:02.752125" rpa="false" schemaversion="5">
 <suite id="s1" name="Tests" source="C:\Users\user\PycharmProjects\ApplicationTest\tests">
 <suite id="s1-s1" name="Main" source="C:\Users\user\PycharmProjects\ApplicationTest\tests\main.robot">
 <kw name="Begin Web Test" owner="common" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-09T13:02:07.225788" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<msg time="2025-11-09T13:02:24.369451" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg time="2025-11-09T13:02:24.370064" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</msg>
+<msg time="2025-11-09T22:54:03.190078" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2025-11-09T22:55:27.890608" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2025-11-09T13:02:07.225452" elapsed="17.167054">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<status status="PASS" start="2025-11-09T22:54:03.189748" elapsed="89.844170"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="NOT RUN" start="2025-11-09T13:02:24.393213" elapsed="0.000155"/>
+<status status="PASS" start="2025-11-09T22:55:33.034226" elapsed="0.064673"/>
 </kw>
-<status status="FAIL" start="2025-11-09T13:02:07.224481" elapsed="17.169279">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<status status="PASS" start="2025-11-09T22:54:03.188765" elapsed="89.910406"/>
 </kw>
 <test id="s1-s1-t1" name="Acces website" line="12">
-<status status="FAIL" start="2025-11-09T13:02:24.394076" elapsed="0.001113">Parent suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<kw name="Load Web Page" owner="PageAccueil">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:33.100943" level="INFO">Opening url 'https://www.google.com'</msg>
+<arg>${GOOGLE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-09T22:55:33.100698" elapsed="5.739748"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Google</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-09T22:55:38.841047" elapsed="0.048753"/>
+</kw>
+<status status="PASS" start="2025-11-09T22:55:33.100244" elapsed="5.790027"/>
+</kw>
+<kw name="Search Web Site" owner="PageAccueil">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>name=q</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-09T22:55:38.892862" elapsed="0.142860"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:39.036395" level="INFO">Typing text 'iziway' into text field 'name=q'.</msg>
+<arg>name=q</arg>
+<arg>iziway</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-09T22:55:39.036031" elapsed="0.153600"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:39.191168" level="INFO">Sending key(s) ('ENTER',) to name=q element.</msg>
+<msg time="2025-11-09T22:55:39.664283" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2025-11-09T22:55:39.664484" level="INFO">Releasing special key ENTER.</msg>
+<arg>name=q</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-11-09T22:55:39.190011" elapsed="0.528770"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Images</arg>
+<arg>60s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-09T22:55:39.719084" elapsed="0.021250"/>
+</kw>
+<status status="PASS" start="2025-11-09T22:55:38.891516" elapsed="0.849055"/>
+</kw>
+<kw name="Navigate to iziway WebSite" owner="PageAccueil">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:39.742119" level="INFO">Clicking element 'class=zReHs'.</msg>
+<msg time="2025-11-09T22:55:44.944492" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-283.png"&gt;&lt;img src="selenium-screenshot-283.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-09T22:55:44.944865" level="FAIL">Element with locator 'class=zReHs' not found.</msg>
+<arg>class=zReHs</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-09T22:55:39.741745" elapsed="5.209516">Element with locator 'class=zReHs' not found.</status>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Panier</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:44.951724" elapsed="0.000112"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:39.741162" elapsed="5.210970">Element with locator 'class=zReHs' not found.</status>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:33.099330" elapsed="11.853488">Element with locator 'class=zReHs' not found.</status>
 </test>
 <test id="s1-s1-t2" name="Not Found Research" line="17">
-<status status="FAIL" start="2025-11-09T13:02:24.396499" elapsed="0.001073">Parent suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<kw name="Bad Search Product" owner="PageAccueil">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:44.959628" level="INFO">Clicking element 'xpath=//*[@id="small-searchterms"]'.</msg>
+<msg time="2025-11-09T22:55:45.123638" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-284.png"&gt;&lt;img src="selenium-screenshot-284.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-09T22:55:45.124024" level="FAIL">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</msg>
+<arg>${INPUT_SEARCH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-09T22:55:44.959051" elapsed="0.167197">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>${BAD_NAME_PRODUCTS}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.126548" elapsed="0.000064"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.126973" elapsed="0.000112"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Aucun Resultat trouvé</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.127408" elapsed="0.000069"/>
+</kw>
+<arg>Avions</arg>
+<status status="FAIL" start="2025-11-09T22:55:44.957953" elapsed="0.169735">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:44.954785" elapsed="0.173472">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
 </test>
 <test id="s1-s1-t3" name="Found Research" line="20">
-<status status="FAIL" start="2025-11-09T13:02:24.399356" elapsed="0.000776">Parent suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<kw name="Search Product" owner="PageAccueil">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:45.131380" level="INFO">Clicking element 'xpath=//*[@id="small-searchterms"]'.</msg>
+<msg time="2025-11-09T22:55:45.283403" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-285.png"&gt;&lt;img src="selenium-screenshot-285.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-09T22:55:45.283747" level="FAIL">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</msg>
+<arg>${INPUT_SEARCH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-09T22:55:45.130916" elapsed="0.155460">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>${NAME_PRODUCT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.286760" elapsed="0.000076"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.287082" elapsed="0.000057"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Panier</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.287397" elapsed="0.000053"/>
+</kw>
+<arg>Tablettes</arg>
+<status status="FAIL" start="2025-11-09T22:55:45.130212" elapsed="0.157440">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.129249" elapsed="0.158996">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
 </test>
 <test id="s1-s1-t4" name="Choose Your Product" line="23">
-<status status="FAIL" start="2025-11-09T13:02:24.401054" elapsed="0.000841">Parent suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<kw name="Choose Product" owner="PageProduit">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:45.291268" level="INFO">Clicking element '//*[@id="main_category"]/div[1]/div[2]/div[3]/div/div[2]/div[2]/p/a'.</msg>
+<msg time="2025-11-09T22:55:45.570603" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-286.png"&gt;&lt;img src="selenium-screenshot-286.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-09T22:55:45.570787" level="FAIL">Element with locator '//*[@id="main_category"]/div[1]/div[2]/div[3]/div/div[2]/div[2]/p/a' not found.</msg>
+<arg>//*[@id="main_category"]/div[1]/div[2]/div[3]/div/div[2]/div[2]/p/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-09T22:55:45.290847" elapsed="0.281749">Element with locator '//*[@id="main_category"]/div[1]/div[2]/div[3]/div/div[2]/div[2]/p/a' not found.</status>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Ajouter au panier</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.572845" elapsed="0.000054"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.290154" elapsed="0.282900">Element with locator '//*[@id="main_category"]/div[1]/div[2]/div[3]/div/div[2]/div[2]/p/a' not found.</status>
+</kw>
+<kw name="Add Product Quantity" owner="PageProduit">
+<status status="NOT RUN" start="2025-11-09T22:55:45.573531" elapsed="0.000067"/>
+</kw>
+<kw name="Substract Product Quantity" owner="PageProduit">
+<status status="NOT RUN" start="2025-11-09T22:55:45.574146" elapsed="0.000073"/>
+</kw>
+<kw name="Add Product To Cart" owner="PageProduit">
+<status status="NOT RUN" start="2025-11-09T22:55:45.574606" elapsed="0.000075"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.289148" elapsed="0.285880">Element with locator '//*[@id="main_category"]/div[1]/div[2]/div[3]/div/div[2]/div[2]/p/a' not found.</status>
 </test>
 <test id="s1-s1-t5" name="Add Another Product" line="29">
-<status status="FAIL" start="2025-11-09T13:02:24.402908" elapsed="0.000567">Parent suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<kw name="Add Another Product To Cart" owner="PageProduit">
+<kw name="Search Product" owner="PageAccueil">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:45.578399" level="INFO">Clicking element 'xpath=//*[@id="small-searchterms"]'.</msg>
+<msg time="2025-11-09T22:55:45.716094" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-287.png"&gt;&lt;img src="selenium-screenshot-287.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-09T22:55:45.716316" level="FAIL">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</msg>
+<arg>${INPUT_SEARCH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-09T22:55:45.577966" elapsed="0.140735">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>${NAME_PRODUCT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.719025" elapsed="0.000067"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.719315" elapsed="0.000058"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Panier</arg>
+<arg>20s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.719582" elapsed="0.000054"/>
+</kw>
+<arg>Tablettes</arg>
+<status status="FAIL" start="2025-11-09T22:55:45.577411" elapsed="0.142431">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>//*[@id="main_category"]/div[1]/div[2]/div[3]/div/div[3]/div[3]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.720076" elapsed="0.000062"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Panier</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.720341" elapsed="0.000053"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.576780" elapsed="0.143795">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
+</kw>
+<kw name="Add Another Product of Another Category To Cart" owner="PageProduit">
+<status status="NOT RUN" start="2025-11-09T22:55:45.721218" elapsed="0.000125"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.575851" elapsed="0.146122">Element with locator 'xpath=//*[@id="small-searchterms"]' not found.</status>
 </test>
-<test id="s1-s1-t6" name="Valid Registration" line="33">
-<status status="FAIL" start="2025-11-09T13:02:24.404206" elapsed="0.000530">Parent suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<test id="s1-s1-t6" name="Invalid Registration" line="36">
+<kw name="Create Account With Invalid Email" owner="SignUp">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:45.724910" level="INFO">Clicking element 'id=auth-connect-id'.</msg>
+<msg time="2025-11-09T22:55:45.911895" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-288.png"&gt;&lt;img src="selenium-screenshot-288.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-09T22:55:45.912078" level="FAIL">Element with locator 'id=auth-connect-id' not found.</msg>
+<arg>id=auth-connect-id</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-09T22:55:45.724603" elapsed="0.189153">Element with locator 'id=auth-connect-id' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=signup-id</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.913984" elapsed="0.000047"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="register-form"]/form</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.914199" elapsed="0.000039"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=registerModel_FirstName</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.914364" elapsed="0.000037"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=registerModel_FirstName</arg>
+<arg>Test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.914529" elapsed="0.000036"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=registerModel_LastName</arg>
+<arg>User</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.914690" elapsed="0.000035"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>id=signup-email</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.914847" elapsed="0.000038"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=signup-email</arg>
+<arg>${INVALID_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.915005" elapsed="0.000066"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="registerModel_Phone"]</arg>
+<arg>698745577</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.915224" elapsed="0.000035"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>//*[@id="registerModel_Password"]</arg>
+<arg>hujsen123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.915381" elapsed="0.000034"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>//*[@id="registerModel_ConfirmPassword"]</arg>
+<arg>hujsen123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.915535" elapsed="0.000034"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//*[@id="register-form"]/form/div[4]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.915687" elapsed="0.000032"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Adresse email invalide</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:45.915838" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.724165" elapsed="0.191837">Element with locator 'id=auth-connect-id' not found.</status>
+</kw>
+<kw name="Create Account with Not Strong Password" owner="SignUp">
+<status status="NOT RUN" start="2025-11-09T22:55:45.916692" elapsed="0.000059"/>
+</kw>
+<kw name="Create Account With Existing Email" owner="SignUp">
+<status status="NOT RUN" start="2025-11-09T22:55:45.917245" elapsed="0.000065"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.723180" elapsed="0.194484">Element with locator 'id=auth-connect-id' not found.</status>
 </test>
-<test id="s1-s1-t7" name="Invalid Registration" line="36">
-<status status="FAIL" start="2025-11-09T13:02:24.405440" elapsed="0.000630">Parent suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<test id="s1-s1-t7" name="Invalid LogIn" line="41">
+<kw name="Invalid Password Log In" owner="Login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:45.919834" level="INFO">Clicking element 'id=auth-connect-id'.</msg>
+<msg time="2025-11-09T22:55:46.085109" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-289.png"&gt;&lt;img src="selenium-screenshot-289.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-09T22:55:46.085290" level="FAIL">Element with locator 'id=auth-connect-id' not found.</msg>
+<arg>id=auth-connect-id</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-09T22:55:45.919575" elapsed="0.167391">Element with locator 'id=auth-connect-id' not found.</status>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="login-id"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.087193" elapsed="0.000048"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=login-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.087371" elapsed="0.000038"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Se connecter</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.087563" elapsed="0.000036"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id:email</arg>
+<arg>zinzin52@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.087723" elapsed="0.000035"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>//*[@id="loginModel_Email"]</arg>
+<arg>wrongpassword</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.087885" elapsed="0.000036"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//*[@id="login-form"]/form/div[4]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.088041" elapsed="0.000033"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//*[@id="login-form"]/form/div[4]/div[1]/ul/li</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.088192" elapsed="0.000033"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.919201" elapsed="0.169153">Element with locator 'id=auth-connect-id' not found.</status>
+</kw>
+<kw name="Invalid Email Login In" owner="Login">
+<status status="NOT RUN" start="2025-11-09T22:55:46.088870" elapsed="0.000058"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:45.918506" elapsed="0.170884">Element with locator 'id=auth-connect-id' not found.</status>
 </test>
-<test id="s1-s1-t8" name="Login" line="41">
-<status status="FAIL" start="2025-11-09T13:02:24.406957" elapsed="0.001860">Parent suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<test id="s1-s1-t8" name="Valid LogIn" line="45">
+<kw name="Valid Log in" owner="Login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-09T22:55:46.092803" level="INFO">Clicking element 'id=auth-connect-id'.</msg>
+<msg time="2025-11-09T22:55:46.220329" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-290.png"&gt;&lt;img src="selenium-screenshot-290.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-09T22:55:46.220518" level="FAIL">Element with locator 'id=auth-connect-id' not found.</msg>
+<arg>id=auth-connect-id</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-11-09T22:55:46.092338" elapsed="0.130123">Element with locator 'id=auth-connect-id' not found.</status>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="login-id"]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.222729" elapsed="0.000054"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=login-id</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.222952" elapsed="0.000044"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Se connecter</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.223158" elapsed="0.000043"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>//*[@id="loginModel_Email"]</arg>
+<arg>zinzin52@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.223372" elapsed="0.000042"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>//*[@id="loginModel_Password"]</arg>
+<arg>truc237</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.223638" elapsed="0.000043"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>//*[@id="login-form"]/form/div[4]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-11-09T22:55:46.223841" elapsed="0.000042"/>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:46.091618" elapsed="0.132437">Element with locator 'id=auth-connect-id' not found.</status>
+</kw>
+<status status="FAIL" start="2025-11-09T22:55:46.090502" elapsed="0.133995">Element with locator 'id=auth-connect-id' not found.</status>
 </test>
 <kw name="End Web Test" owner="common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-11-09T13:02:24.411320" elapsed="0.000340"/>
+<status status="PASS" start="2025-11-09T22:55:46.226398" elapsed="4.300982"/>
 </kw>
-<status status="PASS" start="2025-11-09T13:02:24.410730" elapsed="0.001163"/>
+<status status="PASS" start="2025-11-09T22:55:46.226066" elapsed="4.301886"/>
 </kw>
-<status status="FAIL" start="2025-11-09T13:02:06.815881" elapsed="17.596139">Suite setup failed:
-NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
-</status>
+<status status="FAIL" start="2025-11-09T22:54:02.812746" elapsed="107.715471"/>
 </suite>
-<status status="FAIL" start="2025-11-09T13:02:06.770626" elapsed="17.643418"/>
+<status status="FAIL" start="2025-11-09T22:54:02.764997" elapsed="107.768014"/>
 </suite>
 <statistics>
 <total>
@@ -86,5 +436,6 @@ NoSuchDriverException: Message: Unable to obtain driver for chrome; For document
 </suite>
 </statistics>
 <errors>
+<msg time="2025-11-09T22:55:27.890608" level="WARN">Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)</msg>
 </errors>
 </robot>

@@ -17,7 +17,7 @@ Add Another Product To Cart
     #Click Link  /html/body/div[7]/div[1]/ul/li[2]/a
     #Wait Until Page Contains    Panier
     #Click Element  //*[@id="product-details"]/div[2]/div[2]/div[5]/div[1]/div[2]
-    Search Product
+    Search Product   Tablettes
     Click Element  //*[@id="main_category"]/div[1]/div[2]/div[3]/div/div[3]/div[3]/button
     Wait Until Page Contains    Panier    5s
 
@@ -38,6 +38,11 @@ Substract Product Quantity
     Scroll Element Into View    //*[@id="subtract"]
     Click Button  //*[@id="subtract"]
     Sleep    2s
+
+Define Product Quantity
+    Click Element  //*[@id="addtocart_37850_EnteredQuantity"]
+    Click Element  //*[@id="addtocart_37850_EnteredQuantity"]
+    Input Text  //*[@id="addtocart_37850_EnteredQuantity"]  5
 
 Delete Product To Cart
     Click Element  //*[@id="flyout-cart"]

@@ -40,9 +40,9 @@ Substract Product Quantity
     Sleep    2s
 
 Define Product Quantity
-    Click Element  //*[@id="addtocart_37850_EnteredQuantity"]
-    Click Element  //*[@id="addtocart_37850_EnteredQuantity"]
-    Input Text  //*[@id="addtocart_37850_EnteredQuantity"]  5
+    Scroll Element Into View    //*[@id="addtocart_31270_EnteredQuantity"]
+    Click Element  //*[@id="addtocart_31270_EnteredQuantity"]
+    Input Text  //*[@id="addtocart_31270_EnteredQuantity"]  5
 
 Delete Product To Cart
     Click Element  //*[@id="flyout-cart"]

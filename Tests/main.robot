@@ -40,13 +40,13 @@ Add Another Product
     PageProduit.Add Another Product To Cart
     PageProduit.Add Another Product of Another Category To Cart
 
-#Valid Registration
-    #SignUp.Create Account
-
 Invalid Registration
     SignUp.Create Account With Invalid Email
     SignUp.Create Account with Not Strong Password
     SignUp.Create Account With Existing Email
+
+Valid Registration
+    SignUp.Create Account
 
 Invalid LogIn
     Login.Invalid Password Log In
@@ -57,3 +57,6 @@ Valid LogIn
 
 Log Out
     Logout.Log Out
+
+Payment
+    Panier.Pay Product
